@@ -1,0 +1,56 @@
+
+@color-gray-light: #bdc3c7;
+@color-gray-dark: #34495e;
+
+
+@spacing-xs: 10px;
+@spacing-sm: 15px;
+@spacing-md: 20px;
+@spacing-lg: 40px;
+@spacing-xl: 60px;
+
+
+.transition-color {
+    transition: color 0.3s ease;
+}
+
+
+.flex-center {
+    display: flex;
+    align-items: center;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-gap(@gap) {
+    display: flex;
+    gap: @gap;
+}
+
+
+.list-reset {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+.text-hover {
+    &:hover {
+        color: white;
+    }
+}
+
+
+.grid-responsive(@min-width: 250px) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(@min-width, 1fr));
+}
+
+
+.border-top-light {
+    border-top: 1px solid @color-gray-dark;
+}

@@ -1,0 +1,79 @@
+.cards-section {
+  padding: 4rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 1.75rem;
+  margin: 0 0 1.25rem;
+  text-align: center;
+  color: rgba(8, 8, 8, 0.95);
+}
+
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.25rem;
+  align-items: stretch;
+}
+
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
+  border-radius: 12px;
+  padding: 1.25rem;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.45);
+  border: 1px solid rgba(255,255,255,0.04);
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+  min-height: 220px;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+  border-color: rgba(255,255,255,0.06);
+}
+
+.card-title {
+  margin: 0 0 0.5rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #0a0a0a;
+}
+
+.card-description {
+  margin: 0 0 1rem;
+  color: rgba(7, 7, 7, 0.78);
+  line-height: 1.45;
+  flex: 1 0 auto;
+}
+
+
+.card-link {
+  display: inline-block;
+  align-self: flex-start;
+  margin-top: 0.5rem;
+  padding: 0.5rem 0.85rem;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #646cff, #7c3aed);
+  color: #080707;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 6px 18px rgba(100,108,255,0.12);
+  transition: transform 120ms ease, opacity 120ms ease;
+}
+.card-link:hover {
+  transform: translateY(-2px);
+  opacity: 0.95;
+}
+
+
+@media (max-width: 520px) {
+  .cards-section { padding: 2rem 0.75rem; }
+  .section-title { font-size: 1.35rem; }
+  .card { padding: 1rem; min-height: 200px; }
+}
